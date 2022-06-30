@@ -5,7 +5,7 @@
  *  * main - Entry point
  *
  *   *
- *      edu
+ *      
  *    * Return: Always 0 (Success)
  *
  *     */
