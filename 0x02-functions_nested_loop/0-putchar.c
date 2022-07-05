@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  *main -  prints _purtchar, followed by a new line
  *
