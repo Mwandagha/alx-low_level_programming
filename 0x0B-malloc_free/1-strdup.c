@@ -1,24 +1,29 @@
- * @size: size of the array.
- * @c: storaged char
+#include "main.h"
+#include <stdlib.h>
+/**
+ * _strdup - returns a pointer to a newly allocated space in memory.
+ * @str: string.
  *
  * Return: pointer of an array of chars
  */
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-        char *cr;
-        unsigned int i;
+	char *strout;
+	unsigned int i, j;
 
-        if (size == 0)
-                return (NULL);
+	if (str == NULL)
+		return (NULL);
 
-        cr = malloc(sizeof(c) * size);
+	for (i = 0; str[i] != '\0'; i++)
+		;
 
-        if (cr == NULL)
-                return (NULL);
+	strout = (char *)malloc(sizeof(char) * (i + 1));
 
-        for (i = 0; i < size; i++)
-                cr[i] = c;
+	if (strout == NULL)
+		return (NULL);
 
-        return (cr);
+	for (j = 0; j <= i; j++)
+		strout[j] = str[j];
+
+	return (strout);
 }
-
