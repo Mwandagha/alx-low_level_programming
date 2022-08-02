@@ -76,4 +76,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free((*snoopie).name);
 		free(snoopie);
 		return (NULL);
+	}
+	(*snoopie).owner = new_owner;
 
+	return (snoopie);
+}
